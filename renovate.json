@@ -2,5 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
-  ]
+  ],
+  "ignoreDeps": ["@carbon/react", "carbon-components", "carbon-components-react", "carbon-icons", "react", "react-dom"]
 }
