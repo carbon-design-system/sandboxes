@@ -15,11 +15,6 @@
     "react": "^16.x",
     "react-dom": "^16.x"
   },
-  "resolutions": {
-    "carbon-components": "^10.x",
-    "carbon-components-react": "^v7.x",
-    "sass": "1.63.0"
-  },
   "devDependencies": {
     "@vitejs/plugin-react": "4.0.0",
     "sass": "^1.51.0",
