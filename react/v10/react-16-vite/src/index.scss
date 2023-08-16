@@ -1,0 +1,13 @@
+/*
+  This sandbox uses a precompiled version of `carbon-component` styles 
+  served via unpkg.
+
+  If you'd like to enable live sass compliation of Carbon styles:
+    1. Uncomment the line below with the @use declaration
+    2. Remove the <script> tag loading carbon-component css in index.html
+   
+  Please note that Sass compliation can take some time, particularly 
+  in resource-constrained environments such as stackblitz.
+*/
+
+// @use 'carbon-components/scss/globals/scss/styles.scss';

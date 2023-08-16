@@ -72,6 +72,10 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
+# Yarn lockfiles and cache (to ensure when standboxes are spun up they always use the latest dependency versions)
+yarn.lock
+.yarn
+
 # dotenv environment variable files
 .env
 .env.development.local
