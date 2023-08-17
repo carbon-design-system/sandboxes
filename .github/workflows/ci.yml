@@ -35,8 +35,7 @@ jobs:
           yarn install
       - name: Build project
         run: |
-          cd ${{ matrix.sandbox }}
-          yarn build
+          cd ${{ matrix.sandbox }} && yarn build && exit 1
 
   deploy-preview:
     runs-on: ubuntu-latest
