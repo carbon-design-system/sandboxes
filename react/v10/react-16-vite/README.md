@@ -2,7 +2,7 @@
 
 This project is intended to serve as a reproduction starter for the Carbon Design System.
 
-[View it on StackBlitz](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/main/react/v10/react-16-vite/?preset=node=)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/main/react/v10/react-16-vite/?preset=node=)
 
 ## Running locally
 
