@@ -1,6 +1,7 @@
 name: daily builds
 
 on:
+  workflow_dispatch:
   schedule:
     # Run once daily at 00:00 UTC, ~7/8PM CST
     - cron: "0 0 * * *"
