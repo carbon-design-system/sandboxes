@@ -50,7 +50,7 @@ jobs:
             react/v10/react-16-vite,
           ]
     environment:
-      name: ${{ matrix.sandbox }} stackblitz preview
+      name: ${{ matrix.sandbox }}
       url: https://stackblitz.com/github/carbon-design-system/sandboxes/tree/${{ github.sha }}/${{ matrix.sandbox }}/
     steps:
       - name: Generate job summary
