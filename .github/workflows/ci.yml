@@ -1,4 +1,4 @@
-name: Deploy previews
+name: ci
 
 on:
   push:
@@ -11,24 +11,55 @@ on:
     types: [checks_requested]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
+      fail-fast: false
       matrix:
-        version:
+        sandbox:
           [
-            react/latest/react-16-vite,
-            react/latest/react-17-vite,
             react/latest/react-18-vite,
-            react/v10/react-16-vite,
+            react/latest/react-17-vite,
+            react/latest/react-16-vite,
             react/v10/react-17-vite,
+            react/v10/react-16-vite,
+          ]
+    steps:
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 #v3.5.3
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d #v3.8.1
+        with:
+          node-version: "18.x"
+      - name: Install dependencies
+        run: |
+          cd ${{ matrix.sandbox }}
+          yarn install
+      - name: Build project
+        run: |
+          cd ${{ matrix.sandbox }}
+          yarn build
+
+  deploy-preview:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        sandbox:
+          [
+            react/latest/react-18-vite,
+            react/latest/react-17-vite,
+            react/latest/react-16-vite,
+            react/v10/react-17-vite,
+            react/v10/react-16-vite,
           ]
     environment:
-      name: ${{ matrix.version }} stackblitz preview
-      url: https://stackblitz.com/github/carbon-design-system/sandboxes/tree/${{ github.sha }}/${{ matrix.version }}/
+      name: ${{ matrix.sandbox }}
+      url: https://stackblitz.com/github/carbon-design-system/sandboxes/tree/${{ github.sha }}/${{ matrix.sandbox }}/
     steps:
       - name: Generate job summary
         run: |
           echo "### Sandbox created with SHA ${{ github.sha }} :rocket:" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
-          echo "[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/${{ github.sha }}/${{ matrix.version }}/)" >> $GITHUB_STEP_SUMMARY
+          echo "[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/${{ github.sha }}/${{ matrix.sandbox }}/)" >> $GITHUB_STEP_SUMMARY
