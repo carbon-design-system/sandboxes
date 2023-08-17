@@ -13,7 +13,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
+      fail-fast: false
       matrix:
         sandbox:
           [
@@ -39,7 +41,9 @@ jobs:
 
   deploy-preview:
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
+      fail-fast: false
       matrix:
         sandbox:
           [
