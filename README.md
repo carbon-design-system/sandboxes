@@ -6,8 +6,9 @@ such as stackblitz.
 These can be used for bug reproductions and explorations across different
 versions of key dependencies such as react.
 
-Sandboxes are organized by top-level frameworks such as react and web-components. React can use any variety of react frameworks such as vite, nextjs, gatsby,
-remix, etc. for different testing or reproduction purposes.
+Sandboxes are organized by top-level frameworks such as react and
+web-components. React can use any variety of react frameworks such as vite,
+nextjs, gatsby, remix, etc. for different testing or reproduction purposes.
 
 ## Local development
 
