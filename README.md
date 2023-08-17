@@ -1,5 +1,7 @@
 # Carbon Design System Sandboxes
 
+[![daily builds](https://github.com/carbon-design-system/sandboxes/actions/workflows/daily-builds.yml/badge.svg)](https://github.com/carbon-design-system/sandboxes/actions/workflows/daily-builds.yml)
+
 This repository houses a collection of sandboxes to be used in online editors
 such as stackblitz.
 
