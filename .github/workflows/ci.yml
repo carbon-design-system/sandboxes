@@ -11,8 +11,9 @@ on:
     types: [checks_requested]
 
 jobs:
-  strategy:
-    matrix:
+  deploy:
+    strategy:
+      matrix:
       version:
         [
           react/latest/react-16-vite,
@@ -21,13 +22,13 @@ jobs:
           react/v10/react-16-vite,
           react/v10/react-17-vite,
         ]
-    runs-on: ubuntu-latest
-    environment:
+      runs-on: ubuntu-latest
+      environment:
       name: ${{ matrix.version }} stackblitz preview
       url: https://stackblitz.com/github/carbon-design-system/sandboxes/tree/${{ github.sha }}/${{ matrix.version }}/
-    steps:
-      - name: Generate job summary
-        run: |
-          echo "### Sandbox created with SHA ${{ github.sha }} :rocket:" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
-          echo "[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/${{ github.sha }}/${{ matrix.version }}/)" >> $GITHUB_STEP_SUMMARY
+      steps:
+        - name: Generate job summary
+          run: |
+            echo "### Sandbox created with SHA ${{ github.sha }} :rocket:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
+            echo "[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/${{ github.sha }}/${{ matrix.version }}/)" >> $GITHUB_STEP_SUMMARY
