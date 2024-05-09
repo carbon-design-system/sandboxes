@@ -19,6 +19,7 @@ nextjs, gatsby, remix, etc. for different testing or reproduction purposes.
 | latest (v11.x) | v16           | [Vite](https://vitejs.dev/) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/main/react/latest/react-16-vite/?preset=node=) |
 | v10.x          | v17           | [Vite](https://vitejs.dev/) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/main/react/v10/react-17-vite/?preset=node=)    |
 | v10.x          | v16           | [Vite](https://vitejs.dev/) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/main/react/v10/react-16-vite/?preset=node=)    |
+| latest (v11.x) | v18(with TS)  | [Vite](https://vitejs.dev/) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Gururajj77/sandboxes/tree/main/react/latest/react-18-vite-ts/?preset=node=) |
 
 ## Local development
 
