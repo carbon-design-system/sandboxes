@@ -1,5 +1,5 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "react-18-vite-ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -23,8 +23,8 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "typescript": ">=4.0.0",
     "sass": "^1.77.0",
+    "typescript": ">=4.0.0",
     "typescript-config-carbon": "^0.2.0",
     "vite": "^5.2.8"
   }
