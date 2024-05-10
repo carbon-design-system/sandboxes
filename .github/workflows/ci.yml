@@ -19,6 +19,7 @@ jobs:
       matrix:
         sandbox:
           [
+            react/latest/react-18-vite-ts,
             react/latest/react-18-vite,
             react/latest/react-17-vite,
             react/latest/react-16-vite,
@@ -48,6 +49,7 @@ jobs:
       matrix:
         sandbox:
           [
+            react/latest/react-18-vite-ts,
             react/latest/react-18-vite,
             react/latest/react-17-vite,
             react/latest/react-16-vite,
