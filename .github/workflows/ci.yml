@@ -19,19 +19,19 @@ jobs:
       matrix:
         sandbox:
           [
+            react/latest/react-19-vite-ts,
+            react/latest/react-19-vite,
             react/latest/react-18-vite-ts,
             react/latest/react-18-vite,
             react/latest/react-17-vite,
             react/latest/react-16-vite,
-            react/v10/react-17-vite,
-            react/v10/react-16-vite,
           ]
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
-      - name: Use Node.js 18.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
         with:
-          node-version: "18.x"
+          node-version: "20.x"
       - name: Install dependencies
         run: |
           cd ${{ matrix.sandbox }}
@@ -49,12 +49,12 @@ jobs:
       matrix:
         sandbox:
           [
+            react/latest/react-19-vite-ts,
+            react/latest/react-19-vite,
             react/latest/react-18-vite-ts,
             react/latest/react-18-vite,
             react/latest/react-17-vite,
             react/latest/react-16-vite,
-            react/v10/react-17-vite,
-            react/v10/react-16-vite,
           ]
     environment:
       name: ${{ matrix.sandbox }}

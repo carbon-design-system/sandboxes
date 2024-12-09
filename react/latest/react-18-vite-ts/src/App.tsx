@@ -1,5 +1,4 @@
-import { Button } from '@carbon/react';
-import React from 'react';
+import { Button } from "@carbon/react";
 
 export default function App() {
   return (
