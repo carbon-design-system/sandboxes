@@ -1,0 +1,22 @@
+{
+  "name": "react-19-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@carbon/react": "^1.x",
+    "react": "^19.x",
+    "react-dom": "^19.x"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "sass": "^1.51.0",
+    "vite": "^6.0.3"
+  },
+  "packageManager": "yarn@1.22.22"
+}
