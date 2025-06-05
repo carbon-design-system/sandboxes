@@ -7,7 +7,7 @@ import {
   Heading,
   Section,
 } from "@carbon/react";
-import readme from "../../README.md?raw"; // ← Vite will include the raw text of your README
+import readme from "../../README.md?raw";
 
 function parseTable(raw) {
   const lines = raw.split("\n");
