@@ -140,3 +140,7 @@ dist
 .vscode
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# The output folder is generated in CI and deployed directly to github pages.
+# It doesn't need to be committed to the repo at any time
+docs/
