@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/sandboxes/", // ← replace "/sandboxes/" with "/<your-repo-name>/" if different
+  base: "/",
   plugins: [react()],
   build: {
     outDir: "../docs", // ← “docs” folder at the repo root
