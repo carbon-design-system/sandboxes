@@ -1,0 +1,22 @@
+@use '@carbon/styles/scss/reset';
+@use '@carbon/styles/scss/theme';
+@use '@carbon/styles/scss/themes';
+
+body {
+  @include theme.theme(themes.$white);
+  padding: 2rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.cds-tab-panels {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+
+.cds-tab-panels > div[role="tabpanel"] {
+  padding: 1rem;
+}
+
+
