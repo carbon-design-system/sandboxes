@@ -1,0 +1,16 @@
+@use '@carbon/styles/scss/reset';
+@use '@carbon/styles/scss/theme';
+@use '@carbon/styles/scss/themes';
+@use '@carbon/styles/scss/type';
+@use '@carbon/styles';
+
+body {
+  background: var(--cds-background);
+  color: var(--cds-text-primary);
+}
+
+#root {
+  padding: 2rem;
+}
+
+
