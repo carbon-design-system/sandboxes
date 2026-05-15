@@ -28,7 +28,7 @@ nextjs, gatsby, remix, etc. for different testing or reproduction purposes.
 | Carbon version | Framework                   | Link                                                                                                                                                                                                         |
 | -------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | latest (v11.x) | [Vite](https://vitejs.dev/) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/feat/wc-examples/web-components/latest/vite/?preset=node=)      |
-| latest (v11.x) | [Vite (Lit Tabs)](https://vitejs.dev/) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/feat/wc-examples/web-components/latest/vite-lit/?preset=node=) |
+| latest (v11.x) | [Vite (Lit with State)](https://vitejs.dev/) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/feat/wc-examples/web-components/latest/vite-lit/?preset=node=) |
 
 
 ## Local development

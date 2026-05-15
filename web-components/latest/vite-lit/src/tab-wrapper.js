@@ -26,12 +26,18 @@ class TabWrapper extends LitElement {
     this.tabs = this.tabs.filter((_, i) => i !== index);
   }
 
+  handleTabSelected(event) {
+    this.selectedIndex = event.detail.index;
+  }
+
   resetTabs() {
     this.tabs = [...this.defaultTabs];
     this.selectedIndex = 0;
   }
 
   render() {
+    console.log(this.selectedIndex,'this.selectedIndex');
+    
     return html`
       <cds-button style="margin-bottom: 2rem" @click="${this.resetTabs}">
         Reset
@@ -40,6 +46,7 @@ class TabWrapper extends LitElement {
         dismissable
         selected-index="${this.selectedIndex}"
         @cds-tab-closed="${this.handleTabClosed}"
+        @cds-tabs-selected="${this.handleTabSelected}"
       >
         ${this.tabs.map(tab => html`
           <cds-tab 
@@ -52,16 +59,22 @@ class TabWrapper extends LitElement {
         `)}
       </cds-tabs>
       <div class="cds-tab-panels">
-        ${this.tabs.map((tab, index) => html`
-          <div 
-            id="${tab.target}" 
-            role="tabpanel" 
+        ${this.tabs.map((tab, index) => {
+          console.log(index, 'index');
+          console.log(this.selectedIndex !== index, 'this.selectedIndex !== index');
+          
+          return html`
+          <div
+            id="${tab.target}"
+            role="tabpanel"
             aria-labelledby="${tab.id}"
             ?hidden="${this.selectedIndex !== index}"
           >
             <p>Content for ${tab.label}</p>
           </div>
-        `)}
+        `
+        }
+        )}
       </div>
     `;
   }
