@@ -20,14 +20,10 @@ function App() {
 
     const handleTabClosed = (event) => {
       const { index } = event.detail;
-      setTabs(prevTabs => prevTabs.filter((_, i) => i !== index));
-      
-      // Adjust selected index if needed
-      if (index === selectedIndex && selectedIndex > 0) {
-        setSelectedIndex(selectedIndex - 1);
-      } else if (index < selectedIndex) {
-        setSelectedIndex(selectedIndex - 1);
-      }
+      setTabs(prevTabs => {
+        const newTabs = prevTabs.filter((_, i) => i !== index);
+        return newTabs;
+      });
     };
 
     const handleTabSelected = (event) => {
@@ -41,7 +37,7 @@ function App() {
       tabsElement.removeEventListener('cds-tab-closed', handleTabClosed);
       tabsElement.removeEventListener('cds-tabs-selected', handleTabSelected);
     };
-  }, [selectedIndex]);
+  }, []);
 
   const resetTabs = () => {
     setTabs([...defaultTabs]);
@@ -53,11 +49,12 @@ function App() {
       <h1>Carbon Tabs with React</h1>
       <p>This example demonstrates using Carbon's dismissable tabs web component in a React application.</p>
       
-      <cds-button style={{ marginBottom: '2rem' }} onClick={resetTabs}>
+      <cds-button style={{ marginTop: '2rem', marginBottom: '2rem' }} onClick={resetTabs}>
         Reset Tabs
       </cds-button>
 
       <cds-tabs
+        key="main-tabs"
         ref={tabsRef}
         dismissable
         selected-index={selectedIndex}

@@ -15,13 +15,6 @@ function App() {
   const handleTabClosed = (event) => {
     const { index } = event.detail;
     setTabs(prevTabs => prevTabs.filter((_, i) => i !== index));
-    
-    // Adjust selected index if needed
-    if (index === selectedIndex && selectedIndex > 0) {
-      setSelectedIndex(selectedIndex - 1);
-    } else if (index < selectedIndex) {
-      setSelectedIndex(selectedIndex - 1);
-    }
   };
 
   const handleTabSelected = (event) => {
@@ -38,7 +31,7 @@ function App() {
       <h1>Carbon Tabs with React 17</h1>
       <p>This example uses <code>@lit/react</code> wrapper for better web component compatibility in React 17.</p>
       
-      <CdsButton style={{ marginBottom: '2rem' }} onClick={resetTabs}>
+      <CdsButton style={{ marginTop: '2rem', marginBottom: '2rem' }} onClick={resetTabs}>
         Reset Tabs
       </CdsButton>
 
