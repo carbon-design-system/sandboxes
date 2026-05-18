@@ -14,9 +14,13 @@ body {
   background-color: #f4f4f4;
   border-radius: 4px;
 }
-
 .cds-tab-panels > div[role="tabpanel"] {
   padding: 1rem;
+}
+
+cds-button {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 

@@ -49,7 +49,7 @@ function App() {
       <h1>Carbon Tabs with React</h1>
       <p>This example demonstrates using Carbon's dismissable tabs web component in a React application.</p>
       
-      <cds-button style={{ marginTop: '2rem', marginBottom: '2rem' }} onClick={resetTabs}>
+      <cds-button onClick={resetTabs}>
         Reset Tabs
       </cds-button>
 
@@ -78,7 +78,7 @@ function App() {
             id={tab.target}
             role="tabpanel"
             aria-labelledby={tab.id}
-            hidden={selectedIndex !== index}
+            hidden
           >
             <h2>{tab.label}</h2>
             <p>Content for {tab.label}</p>

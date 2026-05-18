@@ -31,7 +31,7 @@ function App() {
       <h1>Carbon Tabs with React 17</h1>
       <p>This example uses <code>@lit/react</code> wrapper for better web component compatibility in React 17.</p>
       
-      <CdsButton style={{ marginTop: '2rem', marginBottom: '2rem' }} onClick={resetTabs}>
+      <CdsButton onClick={resetTabs}>
         Reset Tabs
       </CdsButton>
 
