@@ -36,8 +36,6 @@ class TabWrapper extends LitElement {
   }
 
   render() {
-    console.log(this.selectedIndex,'this.selectedIndex');
-    
     return html`
       <cds-button style="margin-bottom: 2rem" @click="${this.resetTabs}">
         Reset
@@ -60,9 +58,6 @@ class TabWrapper extends LitElement {
       </cds-tabs>
       <div class="cds-tab-panels">
         ${this.tabs.map((tab, index) => {
-          console.log(index, 'index');
-          console.log(this.selectedIndex !== index, 'this.selectedIndex !== index');
-          
           return html`
           <div
             id="${tab.target}"
