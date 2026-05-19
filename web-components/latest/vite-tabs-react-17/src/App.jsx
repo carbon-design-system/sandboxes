@@ -17,10 +17,6 @@ function App() {
     setTabs(prevTabs => prevTabs.filter((_, i) => i !== index));
   };
 
-  const handleTabSelected = (event) => {
-    setSelectedIndex(event.detail.index);
-  };
-
   const resetTabs = () => {
     setTabs([...defaultTabs]);
     setSelectedIndex(0);
@@ -39,7 +35,6 @@ function App() {
         dismissable
         selectedIndex={selectedIndex}
         onCdsTabClosed={handleTabClosed}
-        onCdsTabsSelected={handleTabSelected}
       >
         {tabs.map(tab => (
           <CdsTab

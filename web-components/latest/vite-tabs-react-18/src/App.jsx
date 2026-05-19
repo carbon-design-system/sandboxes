@@ -26,16 +26,10 @@ function App() {
       });
     };
 
-    const handleTabSelected = (event) => {
-      setSelectedIndex(event.detail.index);
-    };
-
     tabsElement.addEventListener('cds-tab-closed', handleTabClosed);
-    tabsElement.addEventListener('cds-tabs-selected', handleTabSelected);
 
     return () => {
       tabsElement.removeEventListener('cds-tab-closed', handleTabClosed);
-      tabsElement.removeEventListener('cds-tabs-selected', handleTabSelected);
     };
   }, []);
 
@@ -78,7 +72,7 @@ function App() {
             id={tab.target}
             role="tabpanel"
             aria-labelledby={tab.id}
-            hidden
+            hidden={selectedIndex !== index}
           >
             <h2>{tab.label}</h2>
             <p>Content for {tab.label}</p>
