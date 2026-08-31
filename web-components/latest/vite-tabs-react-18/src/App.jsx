@@ -40,9 +40,9 @@ function App() {
 
   return (
     <div>
-      <h1>Carbon Tabs with React</h1>
+      <h1>Carbon Tabs with React 18</h1>
       <p>This example demonstrates using Carbon's dismissable tabs web component in a React application.</p>
-      
+
       <cds-button onClick={resetTabs}>
         Reset Tabs
       </cds-button>

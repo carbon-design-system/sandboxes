@@ -26,7 +26,7 @@ function App() {
     <div>
       <h1>Carbon Tabs with React 17</h1>
       <p>This example uses <code>@lit/react</code> wrapper for better web component compatibility in React 17.</p>
-      
+
       <CdsButton onClick={resetTabs}>
         Reset Tabs
       </CdsButton>
