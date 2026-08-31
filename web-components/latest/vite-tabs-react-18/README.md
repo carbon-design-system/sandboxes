@@ -2,6 +2,8 @@
 
 This example demonstrates how to use Carbon's dismissable tabs web component in a React application.
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/main/web-components/latest/vite-tabs-react-18/?preset=node=)
+
 ## Features
 
 - Uses Carbon Web Components `<cds-tabs>` with dismissable functionality

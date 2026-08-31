@@ -2,6 +2,9 @@
 
 Carbon Design System tabs example using `@carbon/web-components` wrapped in a [Lit](https://lit.dev/) custom element.
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/carbon-design-system/sandboxes/tree/main/web-components/latest/vite-lit/?preset=node=)
+
+
 ## Overview
 
 This sandbox demonstrates how to use [Lit](https://lit.dev/) to build a custom wrapper element (`<tab-wrapper>`) around Carbon's `<cds-tabs>` and `<cds-tab>` web components.
